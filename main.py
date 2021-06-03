@@ -5,7 +5,7 @@ from bs4 import BeautifulSoup
 def wikiurl(serach_term):
     return f"https://en.wikipedia.org/wiki/{parse.quote(serach_term)}"
 
-def clean_para(text): # Removes the references in paragraphs e.g. [30]
+def clean_para(text): # Removes the references in paragraphs e.g. somerandomtext[30] -> somerandomtext
     i = 0  
     result = ''
     while (i < len(text)):
