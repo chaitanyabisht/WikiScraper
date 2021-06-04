@@ -13,6 +13,7 @@ def clean_para(text): # Removes the references in paragraphs e.g. somerandomtext
             while (text[i] != ']'):
                 i += 1
             i += 1
+            continue
         result += text[i]
         i += 1
 
