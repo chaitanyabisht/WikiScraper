@@ -43,7 +43,7 @@ def article(url):
         while para_headings[i] != None:
             obj = para_headings[i]
             
-            if (obj.name == 'h2' and obj.text not in ['Contents','See also[edit]','Notes[edit]','References[edit]','Further reading[edit]','External links[edit]']):
+            if (obj.name == 'h2' and obj.text not in ['Contents','See also[edit]','See also','Notes[edit]','Notes','References[edit]','References','Further reading[edit]','Further reading','External links[edit]','External links']):
                 key = (obj.text.split('['))[0]
                 i += 1
                 value = ''
