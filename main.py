@@ -31,7 +31,7 @@ def article(url):
     index = 1
     try:
         while (para_headings[index].name != 'h2'):
-            heading_para += clean_para(para_headings[index].text) + '\n'
+            heading_para += (para_headings[index].text) + '\n'
             index += 1
     except:
         pass
@@ -49,7 +49,7 @@ def article(url):
                 value = ''
                 while (para_headings[i].name != 'h2'):
                     
-                    value += (clean_para(para_headings[i].text)) + '\n'
+                    value += (para_headings[i].text) + '\n'
                     i += 1
 
                 i -= 1
@@ -59,6 +59,9 @@ def article(url):
             
     except:
         pass
+
+    for key in result: #Cleaning Paragraphs
+        result[key] = clean_para(result[key])
 
     return result
 
